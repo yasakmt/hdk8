@@ -2,8 +2,8 @@
 .idea
 ###App and Terraform related####
 
-envhdk8/*
-env/*
+/*envhdk8/
+/*env/
 .DS_Store
 
 # Local .terraform directories
