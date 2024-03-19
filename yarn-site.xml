@@ -1,0 +1,46 @@
+<configuration>
+
+    <!-- Specify the hostname of the ResourceManager -->
+    <property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>0.0.0.0</value>
+    </property>
+
+    <!-- Define the scheduler class -->
+    <property>
+        <name>yarn.resourcemanager.scheduler.class</name>
+        <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
+    </property>
+
+    <!-- Configure the address where the ResourceManager web UI runs -->
+    <property>
+        <name>yarn.resourcemanager.webapp.address</name>
+        <value>${yarn.resourcemanager.hostname}:8088</value>
+    </property>
+
+    <!-- Define the minimum allocation for every container request at the RM -->
+    <property>
+        <name>yarn.scheduler.minimum-allocation-mb</name>
+        <value>100</value>
+    </property>
+
+    <!-- Define the maximum allocation for every container request at the RM -->
+    <property>
+        <name>yarn.scheduler.maximum-allocation-mb</name>
+        <value>200</value>
+    </property>
+
+    <!-- NodeManager settings -->
+    <!-- Memory allocated for containers on a NodeManager -->
+    <property>
+        <name>yarn.nodemanager.resource.memory-mb</name>
+        <value>300</value>
+    </property>
+
+    <!-- Number of CPU vcores allocated for containers on a NodeManager -->
+    <property>
+        <name>yarn.nodemanager.resource.cpu-vcores</name>
+        <value>2</value>
+    </property>
+
+</configuration>
