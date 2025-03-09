@@ -1,5 +1,7 @@
 
 .idea
+.notes.txt
+.gitignore
 ###App and Terraform related####
 
 /*envhdk8/
